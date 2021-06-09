@@ -53,7 +53,7 @@ administrarMedicamento :: Medicamento -> Raton -> Raton
 administrarMedicamento medicamento raton = foldl ingerirHierba raton medicamento
 
 pondsAntiAge :: Medicamento
-pondsAntiAge = [hierbaBuena,hierbaBuena,hierbaBuena,alcachofa]
+pondsAntiAge = (replicate 3 hierbaBuena) ++ [alcachofa]
 
 reduceFatFast :: Number -> Medicamento
 reduceFatFast potencia = [hierbaVerde "Obesidad"] ++ take potencia (repeat alcachofa)
